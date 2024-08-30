@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "com.seven.audio-system": {
+      "version": "file:AudioSystem",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.unity.editorcoroutines": {
       "version": "1.0.0",
       "depth": 1,

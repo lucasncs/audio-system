@@ -1,0 +1,13 @@
+{
+  "name": "com.seven-tools.audio-system",
+  "version": "1.0.0",
+  "displayName": "[SevenTools] AudioSystem",
+  "description": "AudioSystem solution",
+  "unity": "2021.3",
+  "dependencies": {},
+  "keywords": [
+    "audiosystem",
+    "audioservice",
+    "audio"
+  ]
+}

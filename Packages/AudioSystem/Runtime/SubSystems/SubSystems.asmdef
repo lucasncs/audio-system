@@ -1,0 +1,17 @@
+{
+    "name": "SubSystems",
+    "rootNamespace": "Seven.AudioSystem",
+    "references": [
+        "GUID:a06f198af1fa341629a3df6d549416aa",
+        "GUID:560af1a3a4b074f2eb75aecb02b4e0df"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

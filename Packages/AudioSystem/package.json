@@ -1,0 +1,12 @@
+{
+  "name": "com.seven.audio-system",
+  "displayName": "Audio System",
+  "description": "",
+  "version": "1.0.0",
+  "unity": "2019.2",
+  "keywords": [
+  ],
+  "author": {
+    "name": "Lucas Neves de Castro Souza"
+  }
+}
