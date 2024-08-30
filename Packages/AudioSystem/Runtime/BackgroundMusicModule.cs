@@ -33,7 +33,8 @@ namespace Seven.AudioSystem
             var handler = new AudioEventHandler(
                 audioEvent,
                 audioSource,
-                audioEvent.AudioMixerOutput == null ? _audioMixerGroup : audioEvent.AudioMixerOutput);
+                audioEvent.AudioMixerOutput == null ? _audioMixerGroup : audioEvent.AudioMixerOutput,
+                UnregisterHandler);
 
             if (handler.State != AudioEventState.Ready)
             {
@@ -61,15 +62,10 @@ namespace Seven.AudioSystem
             _eventHandlers.Clear();
         }
 
-        internal void SetAudiosVolume(float value)
+        private void UnregisterHandler(AudioEventHandler handler)
         {
-            if (_eventHandlers.Count == 0) return;
-
-            foreach (AudioEventHandler handler in _eventHandlers)
-            {
-                float lerpValue = Mathf.InverseLerp(0, 1, value);
-                handler.AudioSource.volume = Mathf.Lerp(0, handler.OriginalVolume, lerpValue);
-            }
+            _audioSourceProvider.Release(handler.AudioSource);
+            _eventHandlers.Remove(handler);
         }
 
         public void Dispose()
