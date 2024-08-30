@@ -5,5 +5,4 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes: []
-  m_configObjects:
-    com.seven-tools.audio-system.settings: {fileID: 11400000, guid: 9bac46fdb4dbb417ea02f3dbc676317f, type: 2}
+  m_configObjects: {}
