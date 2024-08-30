@@ -1,5 +1,3 @@
-using UnityEngine.Audio;
-
 namespace Seven.AudioSystem.Settings
 {
     internal interface IVolumeConfigurationSettings

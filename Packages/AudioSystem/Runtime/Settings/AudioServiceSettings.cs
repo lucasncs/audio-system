@@ -1,7 +1,5 @@
 using Seven.AudioSystem.SubSystems.ObjectPool;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.Audio;
 
 namespace Seven.AudioSystem.Settings
 {

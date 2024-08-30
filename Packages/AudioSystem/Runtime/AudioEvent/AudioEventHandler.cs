@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Seven.AudioSystem.EventData;
@@ -24,7 +23,6 @@ namespace Seven.AudioSystem
         public readonly Transform AudioSourceTransform;
         public readonly AudioSource AudioSource;
         public readonly AAudioEventData EventData;
-        internal readonly HashSet<Component> AdditionalComponents = new HashSet<Component>();
 
         private readonly MonoBehaviourEventListener _eventListener;
         private readonly Action<AudioEventHandler> _onAudioEndReached;
@@ -180,13 +178,6 @@ namespace Seven.AudioSystem
                 _eventListener.Dispose();
                 Object.Destroy(_eventListener);
             }
-
-            foreach (Component component in AdditionalComponents)
-            {
-                Object.Destroy(component);
-            }
-            
-            AdditionalComponents.Clear();
         }
 
         public override string ToString()
