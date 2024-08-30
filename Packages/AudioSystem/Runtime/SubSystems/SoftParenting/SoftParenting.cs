@@ -24,7 +24,7 @@ namespace Seven.AudioSystem.SubSystems.SoftParenting
             _markedForCleanup.Clear();
         }
 
-        private void UpdatePositions()
+        private void UpdateTransform()
         {
             foreach (KeyValuePair<Transform, Transform> parentingPair in _parentingMap)
             {
@@ -35,6 +35,7 @@ namespace Seven.AudioSystem.SubSystems.SoftParenting
                 }
 
                 parentingPair.Key.position = parentingPair.Value.position;
+                parentingPair.Key.rotation = parentingPair.Value.rotation;
             }
 
             ExecuteCleanup();
@@ -56,7 +57,7 @@ namespace Seven.AudioSystem.SubSystems.SoftParenting
         {
             if (_parentingMap.Count < 1) return;
 
-            UpdatePositions();
+            UpdateTransform();
         }
     }
 }
